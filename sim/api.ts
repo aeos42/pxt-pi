@@ -9,6 +9,18 @@ namespace pxsim.hare {
     export function hop(hop: Hop, color: number) {
 
     }
+    
+    //% blockId=sampleConnect block="connect"
+    //% optionalVariableArgs
+    export function connect() {
+        
+        var connection = new WebSocket("ws://localhost:4000/ws/");
+
+        connection.onopen = function () {
+            connection.send('ping');
+        }
+
+    }
 
     //% blockId=sampleOnLand block="on land"
     //% optionalVariableArgs
@@ -16,6 +28,8 @@ namespace pxsim.hare {
 
     }
 }
+
+
 
 namespace pxsim.turtle {
     /**

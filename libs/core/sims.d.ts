@@ -8,6 +8,11 @@ declare namespace hare {
     //% shim=hare::hop
     function hop(hop: Hop, color: number): void;
 
+    //% blockId=sampleConnect block="connect"
+    //% optionalVariableArgs
+    //% shim=hare::connect
+    function connect(): void;
+
     //% blockId=sampleOnLand block="on land"
     //% optionalVariableArgs
     //% shim=hare::onLand
